@@ -5,31 +5,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://kit.fontawesome.com/7b501ddc7c.js" crossorigin="anonymous"></script>
     <title>U1-W3-D5 | Progetto finale: calcolatrice</title>
 </head>
 
 <body>
     <div id="container">
-        <input type="text" id="display" readonly placeholder="Try this calculator!" />
+
         <div id="buttons">
-            <!--  usare <button /> o usare <input type="button" /> è la stessa cosa -->
-            <button>2</button>
-            <button>1</button>
-            <button>3</button>
-            <button>+</button>
-            <button>4</button>
-            <button>5</button>
-            <button>6</button>
-            <button>-</button>
-            <button>7</button>
-            <button>8</button>
-            <button>9</button>
-            <button>*</button>
-            <button>C</button>
-            <button>0</button>
-            <button>=</button>
-            <button>/</button>
+            <input type="text" id="display" readonly />
+            <button onclick="writeToDisplay('%')">/</button>
+            <button onclick="exponentResultDisplay()"><i class="fa-solid fa-superscript"></i></button>
+            <button onclick="sqrtDisplay()"><i class="fa-solid fa-square-root-variable"></i></button>
+            <button onclick="deleteNumber()"><i class="fa-solid fa-delete-left"></i></button>
+
+            <button onclick="writeToDisplay('7')">7</button>
+            <button onclick="writeToDisplay('8')">8</button>
+            <button onclick="writeToDisplay('9')">9</button>
+            <button onclick="writeToDisplay('/')"><i class="fa-solid fa-divide"></i></button>
+
+            <button onclick="writeToDisplay('4')">4</button>
+            <button onclick="writeToDisplay('5')">5</button>
+            <button onclick="writeToDisplay('6')">6</button>
+            <button onclick="writeToDisplay('*')">X</button>
+
+            <button onclick="writeToDisplay('1')">1</button>
+            <button onclick="writeToDisplay('2')">2</button>
+            <button onclick="writeToDisplay('3')">3</button>
+            <button onclick="writeToDisplay('-')">-</button>
+
+            <button onclick="deleteDisplay()">C</button>
+            <button onclick="writeToDisplay('0')">0</button>
+            <button onclick="writeToDisplay('.')">.</button>
+            <button onclick="writeToDisplay('+')">+</button>
+
+            <button id="showResult" onclick="showNumberToDisplay()">=</button>
+
         </div>
     </div>
     <script src="./assets/js/script.js"></script>
